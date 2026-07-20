@@ -1,0 +1,5 @@
+analysis_code,label,category,loinc
+NABM-1804,Glycémie à jeun,Biochimie,1558-6
+NABM-0552,Cholestérol total,Biochimie,2093-3
+NABM-1130,Hémogramme,Hématologie,58410-2
+NABM-4020,TSH,Endocrinologie,3016-3

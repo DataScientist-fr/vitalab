@@ -1,0 +1,5 @@
+patient_id,last_name,first_name,birthdate,email,analysis_code,result_value,result_flag,lab_id
+P001,Dupont,Marie,1985-04-12,marie.dupont@mail.fr,NABM-1804,1.05 g/L,normal,LAB-A
+P002,Martin,Jean,1972-11-30,j.martin@mail.fr,NABM-0552,2.30 g/L,anormal,LAB-B
+P003,Bernard,Alice,1990-07-08,alice.b@mail.fr,NABM-4020,4.8 mUI/L,anormal,LAB-A
+P001,Dupont,Marie,1985-04-12,marie.dupont@mail.fr,NABM-1130,,normal,LAB-A
