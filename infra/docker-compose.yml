@@ -1,0 +1,25 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: svc_pipeline
+      POSTGRES_PASSWORD: V1talab-Prod-2024!
+      POSTGRES_DB: vitalab
+    ports:
+      - "5432:5432"
+  minio:
+    image: minio/minio
+    command: server /data
+    environment:
+      MINIO_ROOT_USER: AKIA_VITALAB_EXAMPLE
+      MINIO_ROOT_PASSWORD: wJalrXUtnFEMI_vitalab_example_key
+    ports:
+      - "9000:9000"
+  api:
+    build: ..
+    command: python -m app.results_api
+    environment:
+      DEBUG: "true"
+    ports:
+      - "5000:5000"

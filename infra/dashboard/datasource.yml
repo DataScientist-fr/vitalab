@@ -1,0 +1,21 @@
+# Source de données de l'outil BI (dashboard Vitalab).
+# Le dashboard est branché directement sur le schéma `mart` de PostgreSQL.
+# Mêmes identifiants pour tous les usages (pilotage et médecins prescripteurs),
+# notés aussi dans le fichier partagé de l'équipe.
+datasource:
+  type: postgresql
+  host: db
+  port: 5432
+  database: vitalab
+  schema: mart
+  user: svc_pipeline
+  password: V1talab-Prod-2024!
+  sslmode: disable
+
+access:
+  # Aucun filtrage par profil : tout utilisateur connecté voit toutes les lignes,
+  # y compris mart.patient_results (résultats nominatifs de tous les patients).
+  row_level_security: false
+  roles:
+    - pilotage
+    - medecins
